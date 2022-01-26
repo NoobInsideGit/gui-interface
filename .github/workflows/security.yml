@@ -10,8 +10,8 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    name: Naughty Dep Check
+  trojan:
+    name: NPM Trojan Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,12 +22,50 @@ jobs:
       - run: npm install --legacy-peer-deps
       - run: npm run build
       - run: npm install anti-trojan-source
+
+  bidi:
+    name: bidi attack check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+      - run: npm install --legacy-peer-deps
+      - run: npm run build
       - name: Unicode bidi attack check
         run: npx anti-trojan-source --files='/runner/work/gui-interface/gui-interface/dist/**/*.js'
       - name: run auditjs
         run: npx --loglevel=error auditjs@beta ossi --json > auditjs.json || exit 0
       - name: Sensitive File Check
         run: npx ban-sensitive-files -- --all
+  js-audit:
+    name: AuditJS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+      - run: npm install --legacy-peer-deps
+      - run: npm run build
+      - name: run auditjs
+        run: npx --loglevel=error auditjs@beta ossi --json > auditjs.json || exit 0
+
+  sensitive-fs:
+    name: Sensitive File Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+      - run: npm install --legacy-peer-deps
+      - run: npm run build
+      - run: npx ban-sensitive-files -- --all
 
   semgrep:
     name: SemGrep Scan
