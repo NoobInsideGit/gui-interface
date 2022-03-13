@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li >AppRoutingModule</li>
+    <li >AboutRoutingModule</li>
 </ol>
 
 
@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
+            <code>src/app/about/about-routing.module.ts</code>
         </p>
 
 
@@ -74,23 +74,20 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { AboutComponent } from &#x27;./pages/about/about.component&#x27;;
 
 const routes: Routes &#x3D; [
   {
     path: &#x27;&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./home/home.module&#x27;).then(m &#x3D;&gt; m.HomeModule)&quot;
-  },
-  {
-    path: &#x27;about&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./about/about.module&#x27;).then(m &#x3D;&gt; m.AboutModule)&quot;
+    component: AboutComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AboutRoutingModule { }
 </code></pre>
     </div>
 </div>
@@ -137,7 +134,7 @@ export class AppRoutingModule { }
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'AboutRoutingModule.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

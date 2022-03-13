@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  AppComponent</li>
+  HomeComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,18 +64,12 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/app.component.ts</code>
+    <code>src/app/home/pages/home/home.component.ts</code>
 </p>
 
 
 
 
-    <p class="comment">
-        <h3>Implements</h3>
-    </p>
-    <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
-    </p>
 
 
 <section>
@@ -95,19 +89,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-root</code></td>
+                <td class="col-md-9"><code>app-home</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./app.component.scss</code></td>
+                <td class="col-md-9"><code>./home.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./app.component.html</code></td>
+                <td class="col-md-9"><code>./home.component.html</code></td>
             </tr>
 
 
@@ -135,10 +129,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#ngOnInit" >ngOnInit</a>
-                            </li>
-                            <li>
-                                <a href="#updateLanguage" >updateLanguage</a>
+                                <a href="#openDialog" >openDialog</a>
                             </li>
                         </ul>
                     </td>
@@ -158,12 +149,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(translate: TranslateService)</code>
+<code>constructor(dialogService: <a href="../injectables/DialogService.html" target="_self">DialogService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/app.component.ts:10</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/home/pages/home/home.component.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -181,10 +172,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>translate</td>
+                                                        <td>dialogService</td>
                                                   
                                                         <td>
-                                                                    <code>TranslateService</code>
+                                                                        <code><a href="../injectables/DialogService.html" target="_self" >DialogService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -214,16 +205,16 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ngOnInit"></a>
+                    <a name="openDialog"></a>
                     <span class="name">
-                        <span ><b>ngOnInit</b></span>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>openDialog</b></span>
+                        <a href="#openDialog"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>ngOnInit()</code>
+<code>openDialog()</code>
                 </td>
             </tr>
 
@@ -231,7 +222,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/app.component.ts:14</a></div>
+                            class="link-to-prism">src/app/home/pages/home/home.component.ts:14</a></div>
                 </td>
             </tr>
 
@@ -242,75 +233,6 @@
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="updateLanguage"></a>
-                    <span class="name">
-                        <span ><b>updateLanguage</b></span>
-                        <a href="#updateLanguage"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>updateLanguage(event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="19"
-                            class="link-to-prism">src/app/app.component.ts:19</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>event</td>
-                                    <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>
@@ -322,53 +244,36 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 
-import { TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import { DialogService } from &#x27;../../services/dialog.service&#x27;;
 
 @Component({
-  selector: &#x27;app-root&#x27;,
-  templateUrl: &#x27;./app.component.html&#x27;,
-  styleUrls: [&#x27;./app.component.scss&#x27;]
+  selector: &#x27;app-home&#x27;,
+  templateUrl: &#x27;./home.component.html&#x27;,
+  styleUrls: [&#x27;./home.component.scss&#x27;]
 })
-export class AppComponent implements OnInit {
+export class HomeComponent {
 
-  constructor(private translate: TranslateService) { }
+  constructor(private dialogService: DialogService) { }
 
-  ngOnInit(): void {
-    this.translate.addLangs([&quot;en&quot;, &quot;de&quot;]);
-    this.translate.setDefaultLang(this.translate.langs[0]);
+  openDialog(): void {
+    this.dialogService.open();
   }
 
-  updateLanguage(event: any): void {
-    this.translate.use(event.target.value);
-  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;nav&gt;
-    &lt;ul style&#x3D;&quot;list-style: none;&quot;&gt;
-        &lt;li style&#x3D;&quot;float: left; margin-left: 25px;&quot;&gt;&lt;a routerLink&#x3D;&quot;/&quot;&gt;{{ &#x27;NAV.HOME&#x27; | translate }}&lt;/a&gt;&lt;/li&gt;
-        &lt;li style&#x3D;&quot;float: left; margin-left: 25px;&quot;&gt;&lt;a routerLink&#x3D;&quot;/about&quot;&gt;{{ &#x27;NAV.ABOUT&#x27; | translate }}&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;Label&gt; Language
-        &lt;select (change)&#x3D;&quot;updateLanguage($event)&quot;&gt;
-            &lt;option value&#x3D;&quot;en&quot;&gt;English&lt;/option&gt;
-            &lt;option value&#x3D;&quot;de&quot;&gt;Deutsch&lt;/option&gt;
-        &lt;/select&gt;
-    &lt;/Label&gt;
-&lt;/nav&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;p&gt;{{ &#x27;HOME.PAGE_FROM&#x27; | translate }} &lt;code&gt;frontend/src/app/home/pages/home.component.html&lt;/code&gt;&lt;/p&gt;
 
-&lt;br&gt;
-
-&lt;router-outlet&gt;&lt;/router-outlet&gt;</code></pre>
+&lt;button (click)&#x3D;&quot;openDialog()&quot;&gt;{{ &#x27;HOME.OPEN_DIALOG&#x27; | translate }}&lt;/button&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./app.component.scss</code>
+                    <code>./home.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
@@ -398,10 +303,10 @@ export class AppComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><nav>    <ul style="list-style: none;">        <li style="float: left; margin-left: 25px;"><a routerLink="/">{{ \'NAV.HOME\' | translate }}</a></li>        <li style="float: left; margin-left: 25px;"><a routerLink="/about">{{ \'NAV.ABOUT\' | translate }}</a></li>    </ul>    <Label> Language        <select (change)="updateLanguage($event)">            <option value="en">English</option>            <option value="de">Deutsch</option>        </select>    </Label></nav><br><router-outlet></router-outlet></div>'
+        var COMPONENT_TEMPLATE = '<div><p>{{ \'HOME.PAGE_FROM\' | translate }} <code>frontend/src/app/home/pages/home.component.html</code></p><button (click)="openDialog()">{{ \'HOME.OPEN_DIALOG\' | translate }}</button></div>'
     var COMPONENTS = [{'name': 'AboutComponent', 'selector': 'app-about'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'HomeComponent', 'selector': 'app-home'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AppComponent'};
+    var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -447,7 +352,7 @@ export class AppComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'HomeComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
